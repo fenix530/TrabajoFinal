@@ -1,0 +1,227 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.diegoorozco.trabajofinal.EntradasFragment"
+        android:background="@color/colorAccent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="148dp"
+                android:src="@drawable/bebidas"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/bebidas_frias"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="210dp"
+                    android:background="@drawable/boton_redondo"
+                    android:text="@string/JugLec"
+                    android:textColor="@color/white"
+                    android:drawableTop="@drawable/bedidas_agua"
+                    android:paddingTop="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/boton_redondo"
+                    android:text="@string/gaseos"
+                    android:textColor="@color/white"
+                    android:drawableTop="@drawable/cocacola_1"
+                    android:paddingTop="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="230dp"
+                    android:background="@drawable/boton_redondo"
+                    android:text="@string/JugAgu"
+                    android:textColor="@color/white"
+                    android:drawableTop="@drawable/bebidas_leche"
+                    android:paddingTop="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="220dp"
+                    android:background="@drawable/boton_redondo"
+                    android:text="@string/cerveza"
+                    android:textColor="@color/white"
+                    android:drawableTop="@drawable/cerveza1"
+                    android:paddingTop="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/vinos"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="240dp"
+                    android:background="@drawable/boton_redondo"
+                    android:text="@string/VinoTin"
+                    android:textColor="@color/white"
+                    android:drawableTop="@drawable/vino_tinto"
+                    android:paddingTop="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="220dp"
+                    android:background="@drawable/boton_redondo"
+                    android:text="@string/VinoRos"
+                    android:textColor="@color/white"
+                    android:drawableTop="@drawable/vino_rosada"
+                    android:paddingTop="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="240dp"
+                    android:background="@drawable/boton_redondo"
+                    android:text="@string/VinoBla"
+                    android:textColor="@color/white"
+                    android:drawableTop="@drawable/vino_blanco"
+                    android:paddingTop="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="90dp"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/licores"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="260dp"
+                    android:background="@drawable/boton_redondo"
+                    android:text="@string/LicBla"
+                    android:textColor="@color/white"
+                    android:drawableTop="@drawable/licor_blanco"
+                    android:paddingTop="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="210dp"
+                    android:background="@drawable/boton_redondo"
+                    android:text="@string/LicOsc"
+                    android:textColor="@color/white"
+                    android:drawableTop="@drawable/whisky"
+                    android:paddingTop="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="30dp"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

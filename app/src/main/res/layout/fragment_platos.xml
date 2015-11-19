@@ -1,0 +1,256 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.diegoorozco.trabajofinal.EntradasFragment"
+        android:background="@color/colorAccent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="110dp"
+                android:src="@drawable/especialidades"/>
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:src="@drawable/sopas"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="170dp"
+                    android:background="@drawable/boton_redondo"
+                    android:text="@string/Plato1"
+                    android:textColor="@color/white"
+                    android:drawableTop="@drawable/sopa_champi"
+                    android:paddingTop="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="230dp"
+                    android:background="@drawable/boton_redondo"
+                    android:text="@string/Plato3"
+                    android:textColor="@color/white"
+                    android:drawableTop="@drawable/sopa_de_tortilla"
+                    android:paddingTop="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="230dp"
+                    android:background="@drawable/boton_redondo"
+                    android:text="@string/Plato2"
+                    android:textColor="@color/white"
+                    android:drawableTop="@drawable/crema_espinaca"
+                    android:paddingTop="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="170dp"
+                    android:background="@drawable/boton_redondo"
+                    android:text="@string/Plato4"
+                    android:textColor="@color/white"
+                    android:drawableTop="@drawable/sopa_de_cebolla_gratinada_con_emmental"
+                    android:paddingTop="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:src="@drawable/pastas"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="190dp"
+                    android:background="@drawable/boton_redondo"
+                    android:text="@string/Plato5"
+                    android:textColor="@color/white"
+                    android:drawableTop="@drawable/pastas_camarones"
+                    android:paddingTop="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="230dp"
+                    android:background="@drawable/boton_redondo"
+                    android:text="@string/Plato7"
+                    android:textColor="@color/white"
+                    android:drawableTop="@drawable/bolonesa"
+                    android:paddingTop="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="270dp"
+                    android:background="@drawable/boton_redondo"
+                    android:text="@string/Plato6"
+                    android:textColor="@color/white"
+                    android:drawableTop="@drawable/spaghetti_carbonara"
+                    android:paddingTop="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="170dp"
+                    android:background="@drawable/boton_redondo"
+                    android:text="@string/Plato8"
+                    android:textColor="@color/white"
+                    android:drawableTop="@drawable/alfredo"
+                    android:paddingTop="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:src="@drawable/ensaladas"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="170dp"
+                    android:background="@drawable/boton_redondo"
+                    android:text="@string/Ensalada1"
+                    android:textColor="@color/white"
+                    android:drawableTop="@drawable/ensalada_cesar_pollo"
+                    android:paddingTop="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="190dp"
+                    android:background="@drawable/boton_redondo"
+                    android:text="@string/Enalada4"
+                    android:textColor="@color/white"
+                    android:drawableTop="@drawable/ensalada_de_camarones_y_mango"
+                    android:paddingTop="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="240dp"
+                    android:background="@drawable/boton_redondo"
+                    android:text="@string/Ensalada2"
+                    android:textColor="@color/white"
+                    android:drawableTop="@drawable/gourmet"
+                    android:paddingTop="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="190dp"
+                    android:background="@drawable/boton_redondo"
+                    android:text="@string/Ensalada3"
+                    android:textColor="@color/white"
+                    android:drawableTop="@drawable/ensalada_tropical"
+                    android:paddingTop="12dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

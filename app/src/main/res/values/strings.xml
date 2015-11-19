@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">A la Carta :)</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nombre">Superman</string>
+    <string name="nombrepila">Clark Kent</string>
+    <string name="fecha">1993</string>
+    <string name="Entrada1">Bombones de Pollo...8.500</string>
+    <string name="Entrada2">Bruchettas con Ensalada... 9.000</string>
+    <string name="Entrada3">Mini Sandwich de Lomo de Res... 10.000</string>
+    <string name="Entrada4">Tostadas con Atun y Verduras... 9.500</string>
+    <string name="Plato1">Sopa de Champiñones ... 9.000</string>
+    <string name="Plato2">Sopa de Espinaca ... 9.500</string>
+    <string name="Plato3">Sopa de Tortila... 8.500</string>
+    <string name="Plato4">Sopa de Cebolla Gratinada...9.500</string>
+    <string name="Plato5">Pasta con Camrones en Salsa Blnaca... 19.500</string>
+    <string name="Plato6">Pasta Carbonara... 16.500</string>
+    <string name="Plato7">Pasta Boloñesa... 15.500</string>
+    <string name="Plato8">Pasta Alfredo... 16.000</string>
+    <string name="Ensalada1">Ensalada Cesar Con Pollo... 14.500</string>
+    <string name="Ensalada2">Ensalada Gourmet con Pollo... 15.500</string>
+    <string name="Ensalada3">Ensalada Tropical... 16.000</string>
+    <string name="Enalada4">Ensalada con Camarones y Mango... 18.500</string>
+    <string name="JugAgu">Juegos en Agua... 5.000</string>
+    <string name="JugLec">Juegos en Leche...6.000</string>
+    <string name="gaseos">Gaseosas ... 3.500</string>
+    <string name="cerveza">Cerveza .... 5.500</string>
+    <string name="VinoTin">Vinos Tintos</string>
+    <string name="VinoRos">Vinos Rosados</string>
+    <string name="VinoBla">Vinos Blancos</string>
+    <string name="LicOsc">Licores Oscuros: Whiskey - Tequila - Ron</string>
+    <string name="LicBla">Licores Claros: Aguardiante - Vodka</string>
+
+
+</resources>
