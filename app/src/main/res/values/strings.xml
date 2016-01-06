@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">A la Carta :)</string>
 
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nombre">Superman</string>
     <string name="nombrepila">Clark Kent</string>
     <string name="fecha">1993</string>
     <string name="Entrada1">Bombones de Pollo...8.500</string>
-    <string name="Entrada2">Bruchettas con Ensalada... 9.000</string>
+    <string name="Entrada2">Panesillos Gratinados... 9.000</string>
     <string name="Entrada3">Mini Sandwich de Lomo de Res... 10.000</string>
     <string name="Entrada4">Tostadas con Atun y Verduras... 9.500</string>
     <string name="Plato1">Sopa de Champiñones ... 9.000</string>
@@ -31,6 +31,40 @@
     <string name="VinoBla">Vinos Blancos</string>
     <string name="LicOsc">Licores Oscuros: Whiskey - Tequila - Ron</string>
     <string name="LicBla">Licores Claros: Aguardiante - Vodka</string>
-
-
+    <string name="DesEntra1">8 deliciosos bombones de pollo, con encurtido de tomate y cebolla, salsa BBQ y Miel Mostaza, para que disfurtes y compartas.</string>
+    <string name="BuOrden">Añadir a la Orden</string>
+    <string name="BuExtras">Añadir Extras</string>
+    <string name="Jugo1">Mango</string>
+    <string name="Jugo2">Fresa</string>
+    <string name="Jugo3">Maracuya</string>
+    <string name="Jugo4">Guayaba</string>
+    <string name="Jugo5">Guanabana</string>
+    <string name="Jugo6">Limonada</string>
+    <string name="Jugo7">Naranja</string>
+    <string name="BuRegis">Registrate y Recibe las mejore Ofertas</string>
+    <string name="PedidoEsp">Modifica tu plato como tu lo Quieres! Escribe aqui que quieres cambiar de el (si quiere adicionarle algo, abajo encontraras el boton "EXTRAS")</string>
+    <string name="DesEntra2">4 deliciosos sanduches con Pan Danes, lechuga crespa fresca, tomate cherry, delicioso lomo de cerdo acompañado de salsa de la casa para que los disfrutes al Maximo!</string>
+    <string name="DesEntra3">8 delicicso panesillos rellenos de verduras al vapor con salsa de la casa, gratinados al horno con nuestro delicioso queso Serrano.</string>
+    <string name="DesEntra4">7 deliciosas Tostaditas sasonadas con una deliciosa manyequilla de ajo, junto con un mix de verduras y atun con nuestra cremosa mayonesa!</string>
+    <string name="DesSopa1">Deliciosa sopa cremosa de chimpiñones</string>
+    <string name="DesSopa2">Deliciosa sopa cremosa de Espinaca</string>
+    <string name="DesSopa3">Deliciosa sopa de verduras con Tortilla, con el mejor sabor de la casa!</string>
+    <string name="DesSopa4">Deliciosa Sopa de cebolla con trocitos de pan y queso, con un crocantes y sabroso Gratinado de Queso</string>
+    <string name="DesPasta1">Deliciosa Patsta con Camorenes y Salsa Blanca con cebolla, con un delicioso colchon de queso parmessano!</string>
+    <string name="DesPasta2">Deliciosa Pasta Carbonara, la tradicional pasta Italiana con Tocino, salsa blanca, cebolla, queso Parmesano y pollo con un ligero toque de pimienta.</string>
+    <string name="DesPasta3">Deliciosa Pasta Bolognesa, prepracion Italiana de carne molida y timates frescos con deliciosas hiervas para sasonar.</string>
+    <string name="DesPasta4">Deliciosa Pasta Alfredo, preparacion con crema de leche, albahaca, queso parmessano, queso mozarella, ajo  y un ligero toque de pimieenta!</string>
+    <string name="DesEnsa1">La Clasica Ensalada Cesar con Pollo, pidela con Pollo a la Plancha o Apanado, variedadad de lechugas, queso parmessano, crutones de pan y un delicioso aderezo cesar</string>
+    <string name="DesEnsa2">Deliciosa Ensalada gourmet, con variedad de lechuga, tomate cherry, queso en cubos y pollo, acompañado de un delicioso aderezo de la casa.</string>
+    <string name="DesEnsa3">Deliciosa Ensalada con Camarones, variedad e d elechugas, cebolla roja, tomate cherry y delicioso mango dulce, con un exquisito aderezo</string>
+    <string name="DesEnsa4">Increible Mezcla de Lechuga, Mango, Znahoria, queso parmessano, pollo, jamon con un delicioso adrezo dulce.</string>
+    <string name="DesJugAgu">Deliciosos Jugos fruta Natural en agua, para que acompañes tu plato favorito</string>
+    <string name="DesJugLec">Deliciosos Jugos fruta Natural en Leche, para que acompañes tu plato favorito</string>
+    <string name="DesGas">Refrescante Gaseosas de la linea de Coca-Cola para Refrescar tu estadia.</string>
+    <string name="DesCer">Refrescante y Espumosa Cerveza para Acompañar tus platos favoritos o compartir con lo que mas quieres</string>
+    <string name="DesVinT">Delicosos Vinos Tintos para acompañar tus comidas especiales, Precios por Botella</string>
+    <string name="DesVinR">Delicosos Vinos Rosados para acompañar tus comidas especiales, Precios por Botella</string>
+    <string name="DesVinB">Delicosos Vinos Blancos para acompañar tus comidas especiales, Precios por Botella</string>
+    <string name="DesLicB">Licores Blancos para compartir con los que mas quieres, precio por media Botella</string>
+    <string name="DesLicO">Licores Oscuros para compartir con los que mas quieres, precio por media Botella</string>
 </resources>

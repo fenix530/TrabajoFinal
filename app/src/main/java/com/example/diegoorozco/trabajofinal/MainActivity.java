@@ -2,6 +2,7 @@ package com.example.diegoorozco.trabajofinal;
 
 
 
+import android.content.SharedPreferences;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -14,6 +15,8 @@ import android.os.Bundle;
 public class MainActivity extends AppCompatActivity implements ActionBar.TabListener, ViewPager.OnPageChangeListener{
 
     private ViewPager viewPager;
+    SharedPreferences prefs;
+    SharedPreferences.Editor editor;
 
 
     @Override
