@@ -20,6 +20,10 @@ public class BebidasFragment extends Fragment {
         // Required empty public constructor
     }
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,6 +41,8 @@ public class BebidasFragment extends Fragment {
         Button VinoRosado= (Button)inputfragment.findViewById(R.id.bVinoR);
         Button LicorClaro=(Button) inputfragment.findViewById(R.id.bLicorBla);
         Button LicorOscuro=(Button) inputfragment.findViewById(R.id.bLicorOscur);
+
+
 
         JugoAgua.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -67,4 +67,9 @@
     <string name="DesVinB">Delicosos Vinos Blancos para acompañar tus comidas especiales, Precios por Botella</string>
     <string name="DesLicB">Licores Blancos para compartir con los que mas quieres, precio por media Botella</string>
     <string name="DesLicO">Licores Oscuros para compartir con los que mas quieres, precio por media Botella</string>
+
+
+    <string name="Bseguir">Seguir con el pedido</string>
+    <string name="title_activity_vista_pedidos">VistaPedidos</string>
+    <string name="title_activity_vistas">Vistas</string>
 </resources>

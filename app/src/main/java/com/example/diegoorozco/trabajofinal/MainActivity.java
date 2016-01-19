@@ -2,6 +2,7 @@ package com.example.diegoorozco.trabajofinal;
 
 
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -12,17 +13,22 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity implements ActionBar.TabListener, ViewPager.OnPageChangeListener{
 
     private ViewPager viewPager;
     SharedPreferences prefs;
     SharedPreferences.Editor editor;
 
+//    private ArrayList<Pedido> pedidonew = new ArrayList<Pedido>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         viewPager = (ViewPager) findViewById(R.id.pager);
         PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager());
@@ -75,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {
 
     }
+
 }
 class PagerAdapter extends FragmentPagerAdapter {
 
@@ -87,6 +94,7 @@ class PagerAdapter extends FragmentPagerAdapter {
         switch (position){
             case 0:
                 return new EntradasFragment();
+
             case 1:
                 return new PlatosFragment();
             case 2:
