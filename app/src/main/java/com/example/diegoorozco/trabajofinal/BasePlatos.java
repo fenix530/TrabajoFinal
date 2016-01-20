@@ -1,23 +1,58 @@
 package com.example.diegoorozco.trabajofinal;
+//
+import static com.example.diegoorozco.trabajofinal.Constant.FIRST_COLUMN;
+import static com.example.diegoorozco.trabajofinal.Constant.SECOND_COLUMN;
+//import static com.example.diegoorozco.trabajofinal.Constant.THIRD_COLUMN;
 
-import android.content.SharedPreferences;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class BasePlatos extends AppCompatActivity  {
 
+    private ArrayList<HashMap> list;
+//
+//    private Pedido tiltulolist= new Pedido("Pedido","Modificaciones");
+//    private ArrayList<Pedido> pedidonew = new ArrayList<Pedido>();//un arraylist para los pedidos
+
+    private Firebase mRef;
+    private static int Orden=0;
+    private int Cantidad=0;
+
+    private String[] pedidoextra= {"Extras","Pollo","Papas","Atún"};
+    private String[] precios={"Costo","2000","1500","1200"};
+
+//
+
+//    private int cantidad=0;
+//    private int bandera=0;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base_platos);
+        Firebase.setAndroidContext(this);
+
+
 
         TextView DesPlato =(TextView) findViewById(R.id.tDescrPlato);
         TextView TituPlato=(TextView) findViewById(R.id.tTituloPlato);
@@ -31,10 +66,33 @@ public class BasePlatos extends AppCompatActivity  {
         RadioButton RButton6=(RadioButton) findViewById(R.id.RadioSeis);
         RadioButton RButton7=(RadioButton) findViewById(R.id.RadioSiete);
 
+//        Button Seguir = (Button) findViewById(R.id.bSeguir);
+
         Button oreden= (Button) findViewById(R.id.bAnadOrden);
+        Button extra = (Button) findViewById(R.id.bExtras);
 
         Bundle bundle=getIntent().getExtras();
-        String control=bundle.getString("plato");
+        String control = bundle.getString("plato");
+
+        ListView lview = (ListView) findViewById(R.id.listview);
+        populatelist();
+        listviewAdapter adapter = new listviewAdapter(this, list);
+        lview.setAdapter(adapter);
+
+        lview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if(position==0){
+
+                }else{
+                    EditText pextra = (EditText) findViewById(R.id.ePedidEsp);
+                    pextra.setText(pextra.getText()+" "+pedidoextra[position]+", ");
+                    findViewById(R.id.principal).setVisibility(View.VISIBLE);
+                    findViewById(R.id.listview).setVisibility(View.GONE);
+                }
+            }
+        });
+
 
         switch (control)
         {
@@ -220,5 +278,110 @@ public class BasePlatos extends AppCompatActivity  {
 
 
         }
+
+        oreden.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                mRef=new Firebase("https://loginservices.firebaseio.com/Pedidos");
+                if(Cantidad==0) {
+                    Orden++;
+                }
+
+                Firebase ejemplo1=mRef.child("Mesa25").child(Integer.toString(Orden));
+                TextView TituPlato=(TextView) findViewById(R.id.tTituloPlato);
+                EditText Modificaciones = (EditText) findViewById(R.id.ePedidEsp);
+
+
+                String Titulo = TituPlato.getText().toString();//Obtiene el titulo del plato
+                String Modifi = Modificaciones.getText().toString();//Obtiene las modificaciones del plato
+                Pedido nuevopedido = new Pedido(Titulo,Modifi,Integer.toString(Cantidad)); //Creamos un objeto que guardara cada nuevo pedido
+                Cantidad++;
+
+                ejemplo1.setValue(nuevopedido);
+
+                mRef=new Firebase("https://loginservices.firebaseio.com/Pedidos");
+                Firebase ejemplo2= mRef.child("Mesa25").child("pedido");
+
+                ejemplo2.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        String text = (String) dataSnapshot.getValue();
+                        Toast.makeText(BasePlatos.this, "Se ha pedido " + text, Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onCancelled(FirebaseError firebaseError) {
+
+                    }
+                });
+
+
+
+//                agregar();
+
+            }
+        });
+
+        extra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findViewById(R.id.principal).setVisibility(View.GONE);
+                findViewById(R.id.listview).setVisibility(View.VISIBLE);
+
+            }
+        });
+
+
     }
+
+
+    private void populatelist(){
+
+//        TextView TituPlato=(TextView) findViewById(R.id.tTituloPlato);
+//        EditText Modificaciones = (EditText) findViewById(R.id.ePedidEsp);
+//
+//        String Titulo = TituPlato.getText().toString();//Obtiene el titulo del plato
+//        String Modifi = Modificaciones.getText().toString();//Obtiene las modificaciones del plato
+//        Pedido nuevopedido = new Pedido(Titulo,Modifi); //Creamos un objeto que guardara cada nuevo pedido
+
+
+//
+//        pedidonew.add(cantidad,nuevopedido);
+
+        list = new ArrayList<HashMap>();
+        HashMap temp = new HashMap();
+        ////////////////////////////////////////////////////////////////////////////////////////
+
+
+        temp.put(FIRST_COLUMN, pedidoextra[0]);
+        temp.put(SECOND_COLUMN, precios[0]);
+        list.add(temp);
+
+        HashMap temp1 = new HashMap();
+
+        temp1.put(FIRST_COLUMN, pedidoextra[1]);
+        temp1.put(SECOND_COLUMN, precios[1]);
+        list.add(temp1);
+
+        HashMap temp2 = new HashMap();
+
+        temp2.put(FIRST_COLUMN, pedidoextra[2]);
+        temp2.put(SECOND_COLUMN, precios[2]);
+        list.add(temp2);
+
+        HashMap temp3 = new HashMap();
+        temp3.put(FIRST_COLUMN, pedidoextra[3]);
+        temp3.put(SECOND_COLUMN, precios[3]);
+        list.add(temp3);
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+    }
+
+
+
+
 }

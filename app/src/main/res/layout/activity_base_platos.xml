@@ -1,7 +1,9 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.diegoorozco.trabajofinal.BasePlatos"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,109 +13,126 @@
     tools:context="com.example.diegoorozco.trabajofinal.BasePlatos"
     android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Entrada1"
-        android:textColor="@color/white"
-        android:textSize="24dp"
-        android:gravity="center"
-        android:layout_marginBottom="24dp"
-        android:layout_marginTop="24dp"
-        android:id="@+id/tTituloPlato"/>
+        android:orientation="vertical"
+        android:id="@+id/principal"
+        android:visibility="visible">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:src="@drawable/alitas_pollo_500x334"
-        android:layout_marginBottom="22dp"
-        android:id="@+id/iFoto"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/DesEntra1"
-        android:textColor="@color/white"
-        android:textSize="15dp"
-        android:layout_marginBottom="22dp"
-        android:id="@+id/tDescrPlato"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Entrada1"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="24dp"
+            android:id="@+id/tTituloPlato"/>
 
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"
-        android:id="@+id/RadioGroupBebidas">
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/white"
-                    android:text="@string/Jugo1"
-                    android:id="@+id/RadioUno"/>
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/white"
-                    android:text="@string/Jugo2"
-                    android:id="@+id/RadioDos"/>
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/white"
-                    android:text="@string/Jugo3"
-                    android:id="@+id/RadioTres"/>
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/white"
-                    android:text="@string/Jugo4"
-                    android:id="@+id/RadioCuatro"/>
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/white"
-                    android:text="@string/Jugo5"
-                    android:id="@+id/RadioCinco"/>
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/white"
-                    android:text="@string/Jugo6"
-                    android:id="@+id/RadioSeis"/>
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/white"
-                    android:text="@string/Jugo7"
-                    android:id="@+id/RadioSiete"/>
-    </RadioGroup>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/alitas_pollo_500x334"
+            android:layout_marginBottom="22dp"
+            android:id="@+id/iFoto"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/DesEntra1"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginBottom="22dp"
+            android:id="@+id/tDescrPlato"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/PedidoEsp"
-        android:textColor="@color/white"
-        android:textSize="15dp"
-        android:layout_marginBottom="5dp"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="@color/white"
-        android:layout_marginBottom="22dp"
-        android:id="@+id/ePedidEsp"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/RadioGroupBebidas">
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:text="@string/Jugo1"
+                android:id="@+id/RadioUno"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:text="@string/Jugo2"
+                android:id="@+id/RadioDos"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:text="@string/Jugo3"
+                android:id="@+id/RadioTres"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:text="@string/Jugo4"
+                android:id="@+id/RadioCuatro"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:text="@string/Jugo5"
+                android:id="@+id/RadioCinco"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:text="@string/Jugo6"
+                android:id="@+id/RadioSeis"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:text="@string/Jugo7"
+                android:id="@+id/RadioSiete"/>
+        </RadioGroup>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/BuExtras"
-        android:id="@+id/bExtras"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/BuOrden"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:background="@color/green"
-        android:layout_marginBottom="22dp"
-        android:id="@+id/bAnadOrden"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/PedidoEsp"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginBottom="5dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/white"
+            android:layout_marginBottom="22dp"
+            android:id="@+id/ePedidEsp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/BuExtras"
+            android:id="@+id/bExtras"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/BuOrden"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:background="@color/green"
+            android:layout_marginBottom="22dp"
+            android:id="@+id/bAnadOrden"/>
+
+    </LinearLayout>
+
+         <ListView
+            android:id="@+id/listview"
+            android:layout_height="500dp"
+            android:layout_width="match_parent"
+             android:visibility="gone">
+        </ListView>
+
 
 
 </LinearLayout>
