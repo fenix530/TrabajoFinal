@@ -1,13 +1,14 @@
 package com.example.diegoorozco.trabajofinal;
 //
-//import static com.example.diegoorozco.trabajofinal.Constant.FIRST_COLUMN;
-//import static com.example.diegoorozco.trabajofinal.Constant.SECOND_COLUMN;
+import static com.example.diegoorozco.trabajofinal.Constant.FIRST_COLUMN;
+import static com.example.diegoorozco.trabajofinal.Constant.SECOND_COLUMN;
 //import static com.example.diegoorozco.trabajofinal.Constant.THIRD_COLUMN;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -27,7 +28,7 @@ import java.util.HashMap;
 
 public class BasePlatos extends AppCompatActivity  {
 
-//    private ArrayList<HashMap> list = new ArrayList<HashMap>();
+    private ArrayList<HashMap> list;
 //
 //    private Pedido tiltulolist= new Pedido("Pedido","Modificaciones");
 //    private ArrayList<Pedido> pedidonew = new ArrayList<Pedido>();//un arraylist para los pedidos
@@ -36,8 +37,11 @@ public class BasePlatos extends AppCompatActivity  {
     private static int Orden=0;
     private int Cantidad=0;
 
+    private String[] pedidoextra= {"Extras","Pollo","Papas","Atún"};
+    private String[] precios={"Costo","2000","1500","1200"};
+
 //
-//    private ListView lview = (ListView) findViewById(R.id.listview);
+
 //    private int cantidad=0;
 //    private int bandera=0;
 
@@ -65,9 +69,29 @@ public class BasePlatos extends AppCompatActivity  {
 //        Button Seguir = (Button) findViewById(R.id.bSeguir);
 
         Button oreden= (Button) findViewById(R.id.bAnadOrden);
+        Button extra = (Button) findViewById(R.id.bExtras);
 
         Bundle bundle=getIntent().getExtras();
         String control = bundle.getString("plato");
+
+        ListView lview = (ListView) findViewById(R.id.listview);
+        populatelist();
+        listviewAdapter adapter = new listviewAdapter(this, list);
+        lview.setAdapter(adapter);
+
+        lview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if(position==0){
+
+                }else{
+                    EditText pextra = (EditText) findViewById(R.id.ePedidEsp);
+                    pextra.setText(pextra.getText()+" "+pedidoextra[position]+", ");
+                    findViewById(R.id.principal).setVisibility(View.VISIBLE);
+                    findViewById(R.id.listview).setVisibility(View.GONE);
+                }
+            }
+        });
 
 
         switch (control)
@@ -296,62 +320,67 @@ public class BasePlatos extends AppCompatActivity  {
 
 
 //                agregar();
-//                findViewById(R.id.principal).setVisibility(View.GONE);
-//                findViewById(R.id.listview).setVisibility(View.VISIBLE);
+
             }
         });
 
-//        Seguir.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(BasePlatos.this,MainActivity.class);
-//                i.putExtra("Arraylist",pedidonew);
-//                i.putExtra("Cantidad",cantidad);
-//                startActivity(i);
-//            }
-//        });
+        extra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findViewById(R.id.principal).setVisibility(View.GONE);
+                findViewById(R.id.listview).setVisibility(View.VISIBLE);
+
+            }
+        });
 
 
     }
 
 
-//    private void agregar(){
+    private void populatelist(){
+
+//        TextView TituPlato=(TextView) findViewById(R.id.tTituloPlato);
+//        EditText Modificaciones = (EditText) findViewById(R.id.ePedidEsp);
 //
-////        TextView TituPlato=(TextView) findViewById(R.id.tTituloPlato);
-////        EditText Modificaciones = (EditText) findViewById(R.id.ePedidEsp);
-////
-////        String Titulo = TituPlato.getText().toString();//Obtiene el titulo del plato
-////        String Modifi = Modificaciones.getText().toString();//Obtiene las modificaciones del plato
-////        Pedido nuevopedido = new Pedido(Titulo,Modifi); //Creamos un objeto que guardara cada nuevo pedido
-//
-//
+//        String Titulo = TituPlato.getText().toString();//Obtiene el titulo del plato
+//        String Modifi = Modificaciones.getText().toString();//Obtiene las modificaciones del plato
+//        Pedido nuevopedido = new Pedido(Titulo,Modifi); //Creamos un objeto que guardara cada nuevo pedido
+
+
 //
 //        pedidonew.add(cantidad,nuevopedido);
-//
-//
-//        HashMap temp = new HashMap();
-//        ////////////////////////////////////////////////////////////////////////////////////////
-//        if(bandera==0) {
-//
-//            temp.put(FIRST_COLUMN, tiltulolist.getPedido());
-//            temp.put(SECOND_COLUMN, tiltulolist.getComentarios());
-////        temp.put(THIRD_COLUMN, "Total");
-//            list.add(temp);
-//            bandera = 1;
-//        }
-//        else {
-//            for (int i = 0; i < cantidad; i++) {
-//                temp.put(FIRST_COLUMN, pedidonew.get(i).getPedido());
-//                temp.put(SECOND_COLUMN, pedidonew.get(i).getComentarios());
-//                list.add(temp);
-//            }
-//        }
-//        bandera=0;
-//        listviewAdapter adapter = new listviewAdapter(this, list);
-//        lview.setAdapter(adapter);
-///////////////////////////////////////////////////////////////////////////////////////////
-//        cantidad++;
-//    }
+
+        list = new ArrayList<HashMap>();
+        HashMap temp = new HashMap();
+        ////////////////////////////////////////////////////////////////////////////////////////
+
+
+        temp.put(FIRST_COLUMN, pedidoextra[0]);
+        temp.put(SECOND_COLUMN, precios[0]);
+        list.add(temp);
+
+        HashMap temp1 = new HashMap();
+
+        temp1.put(FIRST_COLUMN, pedidoextra[1]);
+        temp1.put(SECOND_COLUMN, precios[1]);
+        list.add(temp1);
+
+        HashMap temp2 = new HashMap();
+
+        temp2.put(FIRST_COLUMN, pedidoextra[2]);
+        temp2.put(SECOND_COLUMN, precios[2]);
+        list.add(temp2);
+
+        HashMap temp3 = new HashMap();
+        temp3.put(FIRST_COLUMN, pedidoextra[3]);
+        temp3.put(SECOND_COLUMN, precios[3]);
+        list.add(temp3);
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+    }
+
 
 
 
